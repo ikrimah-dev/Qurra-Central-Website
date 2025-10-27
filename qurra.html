@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Qurra Central — Find a Qāri’</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="theme-bg">
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">Qurra Central</a>
+      <nav class="nav">
+        <a class="active" href="qurra.html">Find a Qāri’</a>
+        <a href="audio.html">Audio Library</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container pv-lg">
+    <h1 class="page-title">Find a Qāri’</h1>
+
+    <!-- Filters -->
+    <section class="filters" aria-label="Filters">
+      <input id="searchInput" class="input" type="search" placeholder="Search by name, tag, country…" />
+      <select id="countrySelect" class="select">
+        <option value="">Country (all)</option>
+      </select>
+      <select id="paceSelect" class="select">
+        <option value="">Pace (all)</option>
+        <option value="hadr">Hadr / Murattal</option>
+        <option value="tadweer">Tadwīr</option>
+        <option value="tarteel">Tartīl / Mujawwad</option>
+        <option value="tahqeeq">Taḥqīq</option>
+      </select>
+      <select id="sortSelect" class="select">
+        <option value="default">Sort: Default</option>
+        <option value="popular">Popular</option>
+        <option value="qualified">Most Qualified</option>
+      </select>
+      <label class="check">
+        <input id="ijazahOnly" type="checkbox" />
+        <span>Only with ijāzah</span>
+      </label>
+    </section>
+
+    <!-- Legend -->
+    <section class="legend" aria-label="Badge legend">
+      <span class="badge badge-ijazah">Ijāzah</span>
+      <span class="badge badge-hafs">Hafs</span>
+      <span class="badge badge-sabaa">Sab‘ah (7)</span>
+      <span class="badge badge-ashr">‘Ashr (10)</span>
+      <span class="badge badge-popular">Popular</span>
+    </section>
+
+    <!-- Results -->
+    <section id="qariGrid" class="grid"></section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© Qurra Central</small>
+    </div>
+  </footer>
+
+  <script src="qurra-data.js" defer></script>
+  <script src="qurra.js" defer></script>
+</body>
+</html>
